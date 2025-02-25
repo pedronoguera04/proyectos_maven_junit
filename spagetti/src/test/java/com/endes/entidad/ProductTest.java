@@ -49,5 +49,21 @@ class ProductTest {
 		assertEquals(name, p.getName());
 		assertEquals(price, p.getPrice());
 	}
+	
+	@Test
+	@DisplayName("Debería permitir hacer cambios con el set")
+	void deberiaModificarProducto() {
+		product.setName("Coche");
+		assertEquals("Coche", product.getName(), "No se corresponde a realizar set de nombre");
+	}
+	/*
+	@Test
+	@DisplayName("No debería permitir setear un valor nulo en el nombre")
+	void noDeberiaModificarUnProductoConUnNombreNulo() {
+		Exception exception = assertThrows(IllegalArgumentException.class, ()->product.setName(null, 3.2));
+		String mensajeEsperado = "Error: Nombre inválido";
+		
+		assertEquals(mensajeEsperado, exception.getMessage());
+	}*/
 
 }
