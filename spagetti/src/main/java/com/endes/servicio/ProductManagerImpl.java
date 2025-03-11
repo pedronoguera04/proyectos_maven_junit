@@ -20,8 +20,8 @@ public class ProductManagerImpl implements ProductManager {
         this.productDAO = new ProductDAO();
     }
 
-    public ProductManagerImpl(ProductDAO productDAOMock) {
-		// TODO Auto-generated constructor stub
+	public ProductManagerImpl(ProductDAO productDAO) {
+		 this.productDAO = productDAO;
 	}
 
 	/**
