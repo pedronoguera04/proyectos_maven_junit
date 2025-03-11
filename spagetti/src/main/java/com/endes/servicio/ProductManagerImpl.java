@@ -20,7 +20,11 @@ public class ProductManagerImpl implements ProductManager {
         this.productDAO = new ProductDAO();
     }
 
-    /**
+    public ProductManagerImpl(ProductDAO productDAOMock) {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
      * Crea la tabla 'product' si no existe.
      */
     @Override
